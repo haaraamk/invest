@@ -316,7 +316,7 @@ def make_chart(series, signal):
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=s.index, y=s.values, mode="lines",
         line=dict(color=c, width=1.8),
-        fill="tozeroy", fillcolor=f"{c}18"))
+        fill="tozeroy", fillcolor="rgba(34,197,94,0.08)" if c=="#22c55e" else "rgba(251,191,36,0.08)" if c=="#fbbf24" else "rgba(248,113,113,0.08)" if c=="#f87171" else "rgba(129,140,248,0.08)"))
     fig.update_layout(**LAY, height=170, xaxis=dict(**AX), yaxis=dict(**AX))
     return fig
 
